@@ -1,0 +1,16 @@
+C:\Users\Aluno\source\repos\AutenticationModule\AutenticationModule.Desktop\bin\Debug\AutenticationModule.Desktop.exe.config
+C:\Users\Aluno\source\repos\AutenticationModule\AutenticationModule.Desktop\bin\Debug\AutenticationModule.Desktop.exe
+C:\Users\Aluno\source\repos\AutenticationModule\AutenticationModule.Desktop\bin\Debug\AutenticationModule.Desktop.pdb
+C:\Users\Aluno\source\repos\AutenticationModule\AutenticationModule.Desktop\bin\Debug\AutenticationModule.Classes.dll
+C:\Users\Aluno\source\repos\AutenticationModule\AutenticationModule.Desktop\bin\Debug\AutenticationModule.Classes.pdb
+C:\Users\Aluno\source\repos\AutenticationModule\AutenticationModule.Desktop\obj\Debug\AutenticationModule.Desktop.csproj.AssemblyReference.cache
+C:\Users\Aluno\source\repos\AutenticationModule\AutenticationModule.Desktop\obj\Debug\AutenticationModule.Desktop.csproj.SuggestedBindingRedirects.cache
+C:\Users\Aluno\source\repos\AutenticationModule\AutenticationModule.Desktop\obj\Debug\AutenticationModule.Desktop.LevelScreen.resources
+C:\Users\Aluno\source\repos\AutenticationModule\AutenticationModule.Desktop\obj\Debug\AutenticationModule.Desktop.MainScreen.resources
+C:\Users\Aluno\source\repos\AutenticationModule\AutenticationModule.Desktop\obj\Debug\AutenticationModule.Desktop.Properties.Resources.resources
+C:\Users\Aluno\source\repos\AutenticationModule\AutenticationModule.Desktop\obj\Debug\AutenticationModule.Desktop.RegisterScreen.resources
+C:\Users\Aluno\source\repos\AutenticationModule\AutenticationModule.Desktop\obj\Debug\AutenticationModule.Desktop.csproj.GenerateResource.cache
+C:\Users\Aluno\source\repos\AutenticationModule\AutenticationModule.Desktop\obj\Debug\AutenticationModule.Desktop.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\source\repos\AutenticationModule\AutenticationModule.Desktop\obj\Debug\AutenticationModule.Desktop.csproj.CopyComplete
+C:\Users\Aluno\source\repos\AutenticationModule\AutenticationModule.Desktop\obj\Debug\AutenticationModule.Desktop.exe
+C:\Users\Aluno\source\repos\AutenticationModule\AutenticationModule.Desktop\obj\Debug\AutenticationModule.Desktop.pdb
