@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutenticationModule.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,13 @@ namespace AutenticationModule.Desktop
         {
             txtId.Enabled = false;
             txtLogin.Enabled = false;
+            LoadLevels();
+        }
+        private void LoadLevels()
+        {
+            LevelDAO levelSelect = new LevelDAO();
+            cbLevel.DataSource = levelSelect.Select();
+            cbLevel.DisplayMember = "nome";
         }
 
         private void txtSobrenome_TextChanged(object sender, EventArgs e)
@@ -50,6 +58,16 @@ namespace AutenticationModule.Desktop
                 txtConfirmarSenha.Clear();
 
             }
+        }
+
+        private void cbLevel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //LoadLevels();
+        }
+
+        private void cbLevel_Enter(object sender, EventArgs e)
+        {
+            LoadLevels();
         }
     }
 }

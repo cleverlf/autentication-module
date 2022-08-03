@@ -23,6 +23,13 @@ namespace AutenticationModule.Desktop
             txtId.Enabled = false;
             LoadLevels();
         }
+        private void LoadLevels()
+        {
+            LevelDAO levelSelect = new LevelDAO();
+            dgvLevel.DataSource = levelSelect.Select();
+
+        } 
+        
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
@@ -31,12 +38,7 @@ namespace AutenticationModule.Desktop
             LoadLevels();
         }
 
-        private void LoadLevels()
-        {
-            LevelDAO levelSelect = new LevelDAO();
-            dgvLevel.DataSource = levelSelect.Select();
-
-        }       
+              
 
         private void btnSelect_Click(object sender, EventArgs e)
         {

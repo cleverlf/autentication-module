@@ -83,6 +83,8 @@
             this.cbLevel.Name = "cbLevel";
             this.cbLevel.Size = new System.Drawing.Size(126, 23);
             this.cbLevel.TabIndex = 30;
+            this.cbLevel.SelectedIndexChanged += new System.EventHandler(this.cbLevel_SelectedIndexChanged);
+            this.cbLevel.Enter += new System.EventHandler(this.cbLevel_Enter);
             // 
             // lblLevel
             // 
@@ -122,7 +124,7 @@
             this.txtConfirmarSenha.Name = "txtConfirmarSenha";
             this.txtConfirmarSenha.PasswordChar = '•';
             this.txtConfirmarSenha.Size = new System.Drawing.Size(168, 23);
-            this.txtConfirmarSenha.TabIndex = 27;            
+            this.txtConfirmarSenha.TabIndex = 27;
             this.txtConfirmarSenha.Leave += new System.EventHandler(this.txtConfirmarSenha_Leave);
             // 
             // lblSenha
