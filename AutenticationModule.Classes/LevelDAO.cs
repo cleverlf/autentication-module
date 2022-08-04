@@ -27,8 +27,17 @@ namespace AutenticationModule.Classes
         }
 
 
-        public string Update()
+        public string Update(string id, string nome)
         {
+            Connection.sqlConnection.Open();
+            SqlCommand command = Connection.sqlConnection.CreateCommand();
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = ( "update Nivel set Nome=@Nome where id=@ID" );
+            command.Parameters.AddWithValue("@ID", id);
+            command.Parameters.AddWithValue("@Nome", nome);
+            command.ExecuteNonQuery();
+
+            Connection.sqlConnection.Close();
 
             return "atualizar";
         }
@@ -48,8 +57,18 @@ namespace AutenticationModule.Classes
             return table;
         }
 
-        public string Delete()
+        public string Delete(string id)
         {
+            Connection.sqlConnection.Open();
+
+            SqlCommand command = Connection.sqlConnection.CreateCommand();
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = "Delete nivel where id = @id;";
+            command.Parameters.AddWithValue("@id", id);
+            command.ExecuteNonQuery();
+
+            Connection.sqlConnection.Close();
+
             return "deletar";
         }
     }

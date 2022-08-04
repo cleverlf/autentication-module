@@ -58,8 +58,7 @@
             this.toolStripContainer1.ContentPanel.Controls.Add(this.txtLogin);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.lblLogin);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.pictureBox1);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(349, 419);
-            this.toolStripContainer1.ContentPanel.Load += new System.EventHandler(this.toolStripContainer1_ContentPanel_Load_1);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(349, 419);            
             this.toolStripContainer1.LeftToolStripPanelVisible = false;
             this.toolStripContainer1.Location = new System.Drawing.Point(211, 73);
             this.toolStripContainer1.Name = "toolStripContainer1";

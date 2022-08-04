@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using AutenticationModule.Classes;
 
@@ -28,8 +21,7 @@ namespace AutenticationModule.Desktop
             LevelDAO levelSelect = new LevelDAO();
             dgvLevel.DataSource = levelSelect.Select();
 
-        } 
-        
+        }         
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
@@ -38,11 +30,24 @@ namespace AutenticationModule.Desktop
             LoadLevels();
         }
 
-              
-
-        private void btnSelect_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
+            LevelDAO level = new LevelDAO();
+            MessageBox.Show(level.Update(txtId.Text, txtName.Text));
+            LoadLevels();
+        }
 
+        private void dgvLevel_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            txtId.Text = dgvLevel.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtName.Text = dgvLevel.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            LevelDAO level = new LevelDAO();
+            MessageBox.Show(level.Delete(txtId.Text));
+            LoadLevels();
         }
     }
 }

@@ -48,7 +48,7 @@
             this.dgvLevel.Name = "dgvLevel";
             this.dgvLevel.Size = new System.Drawing.Size(318, 150);
             this.dgvLevel.TabIndex = 17;
-            
+            this.dgvLevel.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvLevel_RowHeaderMouseClick);
             // 
             // btnDelete
             // 
@@ -62,6 +62,7 @@
             this.btnDelete.TabIndex = 16;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSelect
             // 
@@ -75,7 +76,6 @@
             this.btnSelect.TabIndex = 15;
             this.btnSelect.Text = "Select";
             this.btnSelect.UseVisualStyleBackColor = false;
-            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // btnUpdate
             // 
@@ -89,6 +89,7 @@
             this.btnUpdate.TabIndex = 14;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnInsert
             // 
