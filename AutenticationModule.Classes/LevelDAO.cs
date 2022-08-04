@@ -22,7 +22,7 @@ namespace AutenticationModule.Classes
 
             Connection.sqlConnection.Close();
 
-            return "";
+            return "Successfully inserted";
 
         }
 
@@ -39,7 +39,7 @@ namespace AutenticationModule.Classes
 
             Connection.sqlConnection.Close();
 
-            return "atualizar";
+            return "Successfully updated";
         }
         public DataTable Select()
         {
@@ -51,6 +51,23 @@ namespace AutenticationModule.Classes
             DataTable table = new DataTable();
             SqlDataReader reader = command.ExecuteReader();
             table.Load(reader);            
+
+            Connection.sqlConnection.Close();
+
+            return table;
+        }
+        public DataTable Select(string nome)
+        {
+            Connection.sqlConnection.Open();
+
+            SqlCommand command = Connection.sqlConnection.CreateCommand();
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = "Select * from nivel where nome = @nome;";
+            command.Parameters.AddWithValue("@nome", nome);
+            DataTable table = new DataTable();
+            SqlDataReader reader = command.ExecuteReader();
+            table.Load(reader);
+
 
             Connection.sqlConnection.Close();
 
@@ -69,7 +86,7 @@ namespace AutenticationModule.Classes
 
             Connection.sqlConnection.Close();
 
-            return "deletar";
+            return "Successfully deleted";
         }
     }
 }

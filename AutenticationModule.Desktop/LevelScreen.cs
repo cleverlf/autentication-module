@@ -49,5 +49,17 @@ namespace AutenticationModule.Desktop
             MessageBox.Show(level.Delete(txtId.Text));
             LoadLevels();
         }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            LevelDAO levelSelect = new LevelDAO();
+            dgvLevel.DataSource = levelSelect.Select(txtName.Text);
+            if (txtName.Text.Equals(""))
+            {
+                LoadLevels();
+                txtId.Clear();
+            }
+            
+        }
     }
 }

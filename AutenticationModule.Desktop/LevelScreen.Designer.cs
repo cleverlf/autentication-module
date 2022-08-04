@@ -76,6 +76,7 @@
             this.btnSelect.TabIndex = 15;
             this.btnSelect.Text = "Select";
             this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // btnUpdate
             // 
