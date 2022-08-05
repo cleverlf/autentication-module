@@ -35,16 +35,18 @@
             this.lblLevel = new System.Windows.Forms.Label();
             this.lblConfirmarSenha = new System.Windows.Forms.Label();
             this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
-            this.lblSenha = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
-            this.lblSobrenome = new System.Windows.Forms.Label();
+            this.lblSurname = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
-            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtLogin = new System.Windows.Forms.TextBox();
-            this.txtSobrenome = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAddLevel
@@ -69,8 +71,9 @@
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
             this.btnRegistrar.TabIndex = 31;
-            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.Text = "Register";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // cbLevel
             // 
@@ -82,7 +85,7 @@
             this.cbLevel.Location = new System.Drawing.Point(373, 390);
             this.cbLevel.Name = "cbLevel";
             this.cbLevel.Size = new System.Drawing.Size(126, 23);
-            this.cbLevel.TabIndex = 30;            
+            this.cbLevel.TabIndex = 30;
             this.cbLevel.Enter += new System.EventHandler(this.cbLevel_Enter);
             // 
             // lblLevel
@@ -126,19 +129,19 @@
             this.txtConfirmarSenha.TabIndex = 27;
             this.txtConfirmarSenha.Leave += new System.EventHandler(this.txtConfirmarSenha_Leave);
             // 
-            // lblSenha
+            // lblPassword
             // 
-            this.lblSenha.AutoSize = true;
-            this.lblSenha.BackColor = System.Drawing.Color.Black;
-            this.lblSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSenha.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.ForeColor = System.Drawing.Color.White;
-            this.lblSenha.Location = new System.Drawing.Point(226, 321);
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblSenha.Size = new System.Drawing.Size(50, 19);
-            this.lblSenha.TabIndex = 26;
-            this.lblSenha.Text = "Senha";
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.BackColor = System.Drawing.Color.Black;
+            this.lblPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblPassword.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.Color.White;
+            this.lblPassword.Location = new System.Drawing.Point(226, 321);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblPassword.Size = new System.Drawing.Size(74, 19);
+            this.lblPassword.TabIndex = 26;
+            this.lblPassword.Text = "Password";
             // 
             // lblLogin
             // 
@@ -154,19 +157,19 @@
             this.lblLogin.TabIndex = 25;
             this.lblLogin.Text = "Login";
             // 
-            // lblSobrenome
+            // lblSurname
             // 
-            this.lblSobrenome.AutoSize = true;
-            this.lblSobrenome.BackColor = System.Drawing.Color.Black;
-            this.lblSobrenome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSobrenome.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSobrenome.ForeColor = System.Drawing.Color.White;
-            this.lblSobrenome.Location = new System.Drawing.Point(226, 248);
-            this.lblSobrenome.Name = "lblSobrenome";
-            this.lblSobrenome.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblSobrenome.Size = new System.Drawing.Size(82, 19);
-            this.lblSobrenome.TabIndex = 24;
-            this.lblSobrenome.Text = "Sobrenome";
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.BackColor = System.Drawing.Color.Black;
+            this.lblSurname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblSurname.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurname.ForeColor = System.Drawing.Color.White;
+            this.lblSurname.Location = new System.Drawing.Point(226, 248);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblSurname.Size = new System.Drawing.Size(66, 19);
+            this.lblSurname.TabIndex = 24;
+            this.lblSurname.Text = "Surname";
             // 
             // lblName
             // 
@@ -180,7 +183,7 @@
             this.lblName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblName.Size = new System.Drawing.Size(42, 19);
             this.lblName.TabIndex = 23;
-            this.lblName.Text = "Nome";
+            this.lblName.Text = "Name";
             // 
             // lblId
             // 
@@ -196,17 +199,17 @@
             this.lblId.TabIndex = 22;
             this.lblId.Text = "Id";
             // 
-            // txtSenha
+            // txtPassword
             // 
-            this.txtSenha.BackColor = System.Drawing.SystemColors.WindowText;
-            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSenha.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.ForeColor = System.Drawing.Color.White;
-            this.txtSenha.Location = new System.Drawing.Point(373, 318);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.PasswordChar = '•';
-            this.txtSenha.Size = new System.Drawing.Size(168, 23);
-            this.txtSenha.TabIndex = 21;
+            this.txtPassword.BackColor = System.Drawing.SystemColors.WindowText;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPassword.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.Color.White;
+            this.txtPassword.Location = new System.Drawing.Point(373, 318);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '•';
+            this.txtPassword.Size = new System.Drawing.Size(168, 23);
+            this.txtPassword.TabIndex = 21;
             // 
             // txtLogin
             // 
@@ -220,17 +223,17 @@
             this.txtLogin.Size = new System.Drawing.Size(168, 23);
             this.txtLogin.TabIndex = 20;
             // 
-            // txtSobrenome
+            // txtSurname
             // 
-            this.txtSobrenome.BackColor = System.Drawing.SystemColors.WindowText;
-            this.txtSobrenome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSobrenome.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSobrenome.ForeColor = System.Drawing.Color.White;
-            this.txtSobrenome.Location = new System.Drawing.Point(373, 245);
-            this.txtSobrenome.Name = "txtSobrenome";
-            this.txtSobrenome.Size = new System.Drawing.Size(168, 23);
-            this.txtSobrenome.TabIndex = 19;
-            this.txtSobrenome.TextChanged += new System.EventHandler(this.txtSobrenome_TextChanged);
+            this.txtSurname.BackColor = System.Drawing.SystemColors.WindowText;
+            this.txtSurname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSurname.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSurname.ForeColor = System.Drawing.Color.White;
+            this.txtSurname.Location = new System.Drawing.Point(373, 245);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(168, 23);
+            this.txtSurname.TabIndex = 19;
+            this.txtSurname.TextChanged += new System.EventHandler(this.txtSobrenome_TextChanged);
             // 
             // txtName
             // 
@@ -255,6 +258,30 @@
             this.txtId.Size = new System.Drawing.Size(168, 23);
             this.txtId.TabIndex = 17;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Black;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(385, 428);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 33;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.Black;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(304, 428);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 34;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
             // RegisterScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,20 +290,22 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAddLevel);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.cbLevel);
             this.Controls.Add(this.lblLevel);
             this.Controls.Add(this.lblConfirmarSenha);
             this.Controls.Add(this.txtConfirmarSenha);
-            this.Controls.Add(this.lblSenha);
+            this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblLogin);
-            this.Controls.Add(this.lblSobrenome);
+            this.Controls.Add(this.lblSurname);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblId);
-            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtLogin);
-            this.Controls.Add(this.txtSobrenome);
+            this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtId);
             this.DoubleBuffered = true;
@@ -298,15 +327,17 @@
         private System.Windows.Forms.Label lblLevel;
         private System.Windows.Forms.Label lblConfirmarSenha;
         private System.Windows.Forms.TextBox txtConfirmarSenha;
-        private System.Windows.Forms.Label lblSenha;
+        private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblLogin;
-        private System.Windows.Forms.Label lblSobrenome;
+        private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtLogin;
-        private System.Windows.Forms.TextBox txtSobrenome;
+        private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

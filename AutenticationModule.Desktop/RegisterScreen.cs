@@ -27,7 +27,7 @@ namespace AutenticationModule.Desktop
         private void txtSobrenome_TextChanged(object sender, EventArgs e)
         {
             string[] firstName = txtName.Text.Split(' ');
-            string[] lastName = txtSobrenome.Text.Split(' ');
+            string[] lastName = txtSurname.Text.Split(' ');
             txtLogin.Text = firstName[0] + lastName[lastName.Length - 1];
         }        
 
@@ -38,7 +38,7 @@ namespace AutenticationModule.Desktop
 
         private void txtConfirmarSenha_Leave(object sender, EventArgs e)
         {
-            var senha = txtSenha.Text;
+            var senha = txtPassword.Text;
             var confirmarSenha = txtConfirmarSenha.Text;
             if (confirmarSenha.Equals(senha))
             {
@@ -47,7 +47,7 @@ namespace AutenticationModule.Desktop
             else
             {
                 MessageBox.Show("Senhas incompativeis");
-                txtSenha.Clear();
+                txtPassword.Clear();
                 txtConfirmarSenha.Clear();
 
             }
@@ -55,6 +55,15 @@ namespace AutenticationModule.Desktop
 
         private void cbLevel_Enter(object sender, EventArgs e)
         {
+            LoadLevels();
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            RegisterDAO register = new RegisterDAO();
+            LevelDAO level = new LevelDAO();
+            var id_nivel = level.SelectId(cbLevel.Text);
+            MessageBox.Show(register.Insert(txtName.Text,txtSurname.Text,txtLogin.Text,txtPassword.Text,id_nivel));
             LoadLevels();
         }
     }

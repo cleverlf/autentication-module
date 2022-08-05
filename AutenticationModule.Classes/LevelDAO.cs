@@ -67,11 +67,27 @@ namespace AutenticationModule.Classes
             DataTable table = new DataTable();
             SqlDataReader reader = command.ExecuteReader();
             table.Load(reader);
-
+            
 
             Connection.sqlConnection.Close();
 
             return table;
+        }
+        public int SelectId(string name)
+        {
+            Connection.sqlConnection.Open();
+
+            SqlCommand command = Connection.sqlConnection.CreateCommand();
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = "Select id from nivel where nome = @name;";
+            command.Parameters.AddWithValue("@name", name);
+            
+            int id = (int)command.ExecuteScalar();
+            command.ExecuteNonQuery();
+
+            Connection.sqlConnection.Close();
+
+            return id;
         }
 
         public string Delete(string id)
