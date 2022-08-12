@@ -66,5 +66,15 @@ namespace AutenticationModule.Desktop
             MessageBox.Show(register.Insert(txtName.Text,txtSurname.Text,txtLogin.Text,txtPassword.Text,id_nivel));
             LoadLevels();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbLevel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

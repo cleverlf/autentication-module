@@ -61,5 +61,12 @@ namespace AutenticationModule.Desktop
             }
             
         }
+
+        private void txtName_Leave(object sender, EventArgs e)
+        {
+            LevelDAO levelSelect = new LevelDAO();
+            dgvLevel.DataSource = levelSelect.SelectLike(txtName.Text);
+        }
+
     }
 }

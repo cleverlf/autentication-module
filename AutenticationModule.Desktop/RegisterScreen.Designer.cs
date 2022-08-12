@@ -86,6 +86,7 @@
             this.cbLevel.Name = "cbLevel";
             this.cbLevel.Size = new System.Drawing.Size(126, 23);
             this.cbLevel.TabIndex = 30;
+            this.cbLevel.SelectedIndexChanged += new System.EventHandler(this.cbLevel_SelectedIndexChanged);
             this.cbLevel.Enter += new System.EventHandler(this.cbLevel_Enter);
             // 
             // lblLevel
@@ -281,6 +282,7 @@
             this.btnUpdate.TabIndex = 34;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // RegisterScreen
             // 

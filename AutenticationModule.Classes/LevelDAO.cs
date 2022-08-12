@@ -90,6 +90,23 @@ namespace AutenticationModule.Classes
             return id;
         }
 
+        public DataTable SelectLike(string like)
+        {
+            Connection.sqlConnection.Open();
+
+            SqlCommand command = Connection.sqlConnection.CreateCommand();
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = "Select nome from nivel where nome like '@like%';";
+            command.Parameters.AddWithValue("@like", like);
+            DataTable table = new DataTable();
+            SqlDataReader reader = command.ExecuteReader();
+            table.Load(reader);
+
+            Connection.sqlConnection.Close();
+
+            return table;
+        }
+
         public string Delete(string id)
         {
             Connection.sqlConnection.Open();

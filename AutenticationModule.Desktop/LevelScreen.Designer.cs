@@ -114,7 +114,8 @@
             this.txtName.Location = new System.Drawing.Point(265, 199);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(275, 23);
-            this.txtName.TabIndex = 12;
+            this.txtName.TabIndex = 12;            
+            this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
             // 
             // lblName
             // 

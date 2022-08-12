@@ -27,3 +27,5 @@ inner join nivel as n
 on r.id_nivel = n.id;
 
 insert into nivel values ((select name from register where id = 1));
+
+Select nome from nivel where nome like 'ad%';
